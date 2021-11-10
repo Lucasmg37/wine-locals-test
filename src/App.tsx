@@ -1,5 +1,16 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import Places from './pages/Places';
+import Global from './styles/global';
+import Theme from './styles/theme';
 
-const src: React.FC = () => <div />;
+const App: React.FC = () => (
+  <>
+    <Global />
+    <ThemeProvider theme={Theme}>
+      <Places />
+    </ThemeProvider>
+  </>
+);
 
-export default src;
+export default App;
