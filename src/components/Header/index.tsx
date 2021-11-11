@@ -1,11 +1,14 @@
 import React from 'react';
-import { Brand } from '../../assets/icons';
+import { Brand, ChevronLeft } from '../../assets/icons';
 
 import { Container } from './styles';
 
 const Header: React.FC = () => (
   <Container>
-    <button type="button"> Voltar</button> <Brand />
+    <button type="button">
+      <ChevronLeft />
+    </button>
+    <Brand />
   </Container>
 );
 

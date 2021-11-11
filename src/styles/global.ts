@@ -25,6 +25,20 @@ const Global = createGlobalStyle`
     flex-direction: column;
   }
 
+  #root {
+    scroll-behavior: smooth;
+    overflow: auto;
+  }
+
+  input, textarea {
+    background: transparent;
+    border: none;
+  }
+
+  textarea {
+    resize: none;
+  }
+
   ul, ol {
     list-style: none;
   }

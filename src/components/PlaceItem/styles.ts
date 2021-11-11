@@ -5,13 +5,14 @@ export const Container = styled.div`
   align-items: center;
   gap: 20px;
 
-  > div {
+  > button:first-child {
     background: ${({ theme }) => theme.colors.secondary};
     box-shadow: 0px 4px 16px #00000029;
     border-radius: 8px;
     padding: 16px;
     font-size: 16px;
     flex: 1;
+    text-align: left;
 
     h2 {
       font-family: ${({ theme }) => theme.fonts.primary};
@@ -22,7 +23,7 @@ export const Container = styled.div`
     }
   }
 
-  > button {
+  > button:last-child {
     display: flex;
     align-items: center;
     justify-content: center;
