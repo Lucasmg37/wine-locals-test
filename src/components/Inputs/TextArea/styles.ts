@@ -1,0 +1,43 @@
+import styled, { css } from 'styled-components';
+
+interface ContainerProps {
+  hasFocus: boolean;
+}
+
+export const Container = styled.label<ContainerProps>`
+  color: ${({ theme }) => theme.colors.white};
+  font-family: ${({ theme }) => theme.fonts.secondary};
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+
+  > span {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+  }
+
+  > div {
+    background: ${({ theme }) => theme.colors.white};
+    border: 1px solid #dededf;
+    border-radius: 4px;
+    display: flex;
+    margin-top: 4px;
+    transition: ease 0.2s all;
+
+    ${({ hasFocus }) =>
+      hasFocus &&
+      css`
+        box-shadow: 0px 0px 2px 2px ${({ theme }) => theme.colors.primary};
+      `}
+
+    textarea {
+      padding: 8px 16px;
+      flex: 1;
+      font-size: 16px;
+      font-family: ${({ theme }) => theme.fonts.secondary};
+      outline: none;
+      height: 311px;
+    }
+  }
+`;
