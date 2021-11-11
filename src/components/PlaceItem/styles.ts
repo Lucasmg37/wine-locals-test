@@ -13,6 +13,11 @@ export const Container = styled.div`
     font-size: 16px;
     flex: 1;
     text-align: left;
+    transition: ease 0.2s all;
+
+    &:hover {
+      transform: scale(1.02);
+    }
 
     h2 {
       font-family: ${({ theme }) => theme.fonts.primary};
@@ -33,5 +38,15 @@ export const Container = styled.div`
     height: 36px;
     margin-right: 12px;
     color: ${({ theme }) => theme.colors.white};
+    transition: ease 0.2s all;
+
+    &:hover {
+      transform: scale(1.1);
+      background: ${({ theme }) => theme.colors.white};
+
+      > svg, path {
+        fill: ${({ theme }) => theme.colors.secondary};
+      }
+    }
   }
 `;

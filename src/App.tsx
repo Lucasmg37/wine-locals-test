@@ -4,7 +4,7 @@ import Router from './routes';
 
 import Global from './styles/global';
 import Theme from './styles/theme';
-import { initData } from './utils/dataMananger';
+import { initData } from './utils/initialize';
 
 const App: React.FC = () => {
   const [finishInit, setFinishInit] = useState(false);

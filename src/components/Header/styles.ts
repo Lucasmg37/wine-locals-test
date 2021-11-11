@@ -12,6 +12,7 @@ export const Container = styled.div<ContainerProps>`
   position: sticky;
   top: 0;
   transition: ease all 0.2s;
+  z-index: 2;
 
   ${({ hasBackground }) =>
     hasBackground &&

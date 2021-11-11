@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: 32px 24px;
+  padding: 32px 24px 92px;
 
   > h1 {
     color: ${({ theme }) => theme.colors.primary};
@@ -41,6 +41,11 @@ export const FloatButton = styled.button`
   position: fixed;
   bottom: 32px;
   right: 40px;
+  transition: ease 0.2s all;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   > svg {
     height: 20px;

@@ -8,6 +8,11 @@ export const Container = styled.div`
   flex: 1;
   position: relative;
   overflow: hidden;
+  transition: ease 0.2s all;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 
   &:after {
     content: '';

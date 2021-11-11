@@ -5,7 +5,8 @@ import MenuItem from '../../components/MenuItem';
 import useScroll from '../../hooks/useScroll';
 import Default from '../../layout/Default';
 import IPlaces from '../../models/IPlaces';
-import PlaceService from '../../services/Place';
+import PlaceGetOneAdapter from '../../services/DataMananger/Adapters/PlaceGetOne';
+import PlaceGetOne from '../../services/Place/GetOne';
 import { getPlatesExtensionNumber } from '../../utils/getStrings';
 
 import { Container, FloatButton } from './styles';
@@ -22,10 +23,12 @@ const Menu: React.FC = () => {
     goToTop();
 
     if (id) {
-      const placeService = new PlaceService();
-      const data = placeService.getOne(+id);
+      const adapter = new PlaceGetOneAdapter<IPlaces>();
+      const placeServices = new PlaceGetOne(adapter);
+      const data = placeServices.getOne(+id);
       setPlace(data);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   const handleGoAddItem = useCallback(() => {
@@ -47,7 +50,11 @@ const Menu: React.FC = () => {
             ))}
         </ul>
 
-        <FloatButton onClick={handleGoAddItem} type="button">
+        <FloatButton
+          aria-label="Adicionar novo prato"
+          onClick={handleGoAddItem}
+          type="button"
+        >
           <Plus />
         </FloatButton>
       </Container>

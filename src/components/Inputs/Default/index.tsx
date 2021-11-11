@@ -5,11 +5,13 @@ import { Container } from './styles';
 interface DefaultInputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
   prePend?: ReactElement;
+  error?: string | false;
 }
 
 const DefaultInput: React.FC<DefaultInputProps> = ({
   label,
   prePend,
+  error,
   ...rest
 }: DefaultInputProps) => {
   const [hasFocus, setHasFocus] = useState(false);
@@ -23,8 +25,10 @@ const DefaultInput: React.FC<DefaultInputProps> = ({
           {...rest}
           onFocus={() => setHasFocus(true)}
           onBlur={() => setHasFocus(false)}
+          id={label}
         />
       </div>
+      {error && <small aria-errormessage={label}>{error}</small>}
     </Container>
   );
 };

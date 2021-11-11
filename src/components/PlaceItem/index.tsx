@@ -21,7 +21,11 @@ const PlaceItem: React.FC<PlaceItemProps> = ({
       <h2>{placeData.name}</h2>
       <p>{getPlatesExtensionNumber(placeData)}</p>
     </button>
-    <button onClick={onPlusClick} type="button">
+    <button
+      aria-label="Adicionar novo prato"
+      onClick={onPlusClick}
+      type="button"
+    >
       <Plus />
     </button>
   </Container>
