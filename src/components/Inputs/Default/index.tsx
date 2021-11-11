@@ -1,4 +1,4 @@
-import React, { InputHTMLAttributes, ReactElement } from 'react';
+import React, { InputHTMLAttributes, ReactElement, useState } from 'react';
 
 import { Container } from './styles';
 
@@ -11,13 +11,22 @@ const DefaultInput: React.FC<DefaultInputProps> = ({
   label,
   prePend,
   ...rest
-}: DefaultInputProps) => (
-  <Container htmlFor={label}>
-    {label}
-    <div>
-      {!!prePend && prePend} <input {...rest} />
-    </div>
-  </Container>
-);
+}: DefaultInputProps) => {
+  const [hasFocus, setHasFocus] = useState(false);
+
+  return (
+    <Container hasFocus={hasFocus} htmlFor={label}>
+      {label}
+      <div>
+        {!!prePend && prePend}{' '}
+        <input
+          {...rest}
+          onFocus={() => setHasFocus(true)}
+          onBlur={() => setHasFocus(false)}
+        />
+      </div>
+    </Container>
+  );
+};
 
 export default DefaultInput;

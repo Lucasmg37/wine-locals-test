@@ -1,9 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PlaceItem from '../../components/PlaceItem';
+import useScroll from '../../hooks/useScroll';
 import Default from '../../layout/Default';
 import IPlaces from '../../models/IPlaces';
 import PlaceService from '../../services/Place';
+import { getPlacesExtensionNumber } from '../../utils/getStrings';
 
 import { Container } from './styles';
 
@@ -12,7 +14,11 @@ const Places: React.FC = () => {
 
   const navigate = useNavigate();
 
+  const { goToTop } = useScroll();
+
   useEffect(() => {
+    goToTop();
+
     const placeServices = new PlaceService();
     const data = placeServices.getAll();
     setPlaces(data);
@@ -33,14 +39,10 @@ const Places: React.FC = () => {
   );
 
   return (
-    <Default>
+    <Default hasGoBack={false}>
       <Container>
         <h1>Lugares</h1>
-        <p>
-          {places.length > 1 && `${places.length} lugares cadastrados`}
-          {places.length === 1 && `1 lugar cadastrado`}
-          {places.length < 1 && `Sem lugares cadastrados`}
-        </p>
+        <p>{getPlacesExtensionNumber(places)}</p>
         <ul>
           {places.map((place, index) => (
             <li>

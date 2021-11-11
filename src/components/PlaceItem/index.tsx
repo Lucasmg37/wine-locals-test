@@ -1,6 +1,7 @@
 import React from 'react';
 import { Plus } from '../../assets/icons';
 import IPlaces from '../../models/IPlaces';
+import { getPlatesExtensionNumber } from '../../utils/getStrings';
 
 import { Container } from './styles';
 
@@ -18,12 +19,7 @@ const PlaceItem: React.FC<PlaceItemProps> = ({
   <Container>
     <button type="button" onClick={onCardClick}>
       <h2>{placeData.name}</h2>
-      <p>
-        {placeData.menuItems.length > 1 &&
-          `${placeData.menuItems.length} pratos`}
-        {placeData.menuItems.length === 1 && `1 prato`}
-        {placeData.menuItems.length < 1 && `Sem pratos`}
-      </p>
+      <p>{getPlatesExtensionNumber(placeData)}</p>
     </button>
     <button onClick={onPlusClick} type="button">
       <Plus />

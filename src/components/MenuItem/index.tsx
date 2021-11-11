@@ -1,16 +1,19 @@
 import React from 'react';
+import IMenuItem from '../../models/IMenuItem';
+import { getFormattedPrice } from '../../utils/price';
 
 import { Container } from './styles';
 
-const MenuItem: React.FC = () => (
+interface MenuItemProps {
+  menuItem: IMenuItem;
+}
+
+const MenuItem: React.FC<MenuItemProps> = ({ menuItem }: MenuItemProps) => (
   <Container>
     <div>
-      <h2>X Bacon</h2> <h3>R$ 20,50</h3>
+      <h2>{menuItem.name}</h2> <h3>{getFormattedPrice(menuItem.price)}</h3>
     </div>
-    <p>
-      Cat ipsum dolor sit amet, caticus cuteicus bathe private parts with tongue
-      then lick
-    </p>
+    <p>{menuItem.description}</p>
   </Container>
 );
 
