@@ -5,6 +5,12 @@ export const Container = styled.div`
   align-items: center;
   gap: 20px;
 
+  @media (min-width: 748px) {
+    position: relative;
+    gap: 0px;
+    height: 100%;
+  }
+
   > button:first-child {
     background: ${({ theme }) => theme.colors.secondary};
     box-shadow: 0px 4px 16px #00000029;
@@ -14,6 +20,12 @@ export const Container = styled.div`
     flex: 1;
     text-align: left;
     transition: ease 0.2s all;
+
+    @media (min-width: 748px) {
+      padding: 24px;
+      font-size: 20px;
+      height: 100%;
+    }
 
     &:hover {
       transform: scale(1.02);
@@ -40,11 +52,17 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.colors.white};
     transition: ease 0.2s all;
 
+    @media (min-width: 748px) {
+      position: absolute;
+      right: 24px;
+    }
+
     &:hover {
       transform: scale(1.1);
       background: ${({ theme }) => theme.colors.white};
 
-      > svg, path {
+      > svg,
+      path {
         fill: ${({ theme }) => theme.colors.secondary};
       }
     }

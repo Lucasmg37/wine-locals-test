@@ -6,4 +6,9 @@ export const Container = styled.div`
   font-size: 16px;
   display: flex;
   align-items: center;
+
+  @media (min-width: 748px) {
+    font-size: 20px;
+    padding-right: 4px;
+  }
 `;

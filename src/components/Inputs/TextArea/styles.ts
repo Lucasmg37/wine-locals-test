@@ -11,6 +11,10 @@ export const Container = styled.label<ContainerProps>`
   font-weight: bold;
   display: block;
 
+  @media (min-width: 748px) {
+    font-size: 20px;
+  }
+
   > span {
     display: flex;
     gap: 8px;
@@ -25,6 +29,10 @@ export const Container = styled.label<ContainerProps>`
     margin-top: 4px;
     transition: ease 0.2s all;
 
+    @media (min-width: 748px) {
+      margin-top: 8px;
+    }
+
     ${({ hasFocus }) =>
       hasFocus &&
       css`
@@ -38,6 +46,11 @@ export const Container = styled.label<ContainerProps>`
       font-family: ${({ theme }) => theme.fonts.secondary};
       outline: none;
       height: 311px;
+
+      @media (min-width: 748px) {
+        font-size: 20px;
+        height: 200px;
+      }
     }
   }
 `;
