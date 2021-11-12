@@ -13,7 +13,7 @@ const useScroll = (id?: string): IuseScroll => {
     if (root) {
       root.scrollTo(0, 0);
     }
-  }, []);
+  }, [id]);
 
   const onScroll = useCallback(e => {
     const target = e.target as HTMLDivElement;
@@ -25,7 +25,7 @@ const useScroll = (id?: string): IuseScroll => {
     if (root) {
       root.addEventListener('scroll', onScroll);
     }
-  }, [onScroll]);
+  }, [id, onScroll]);
 
   const removeListener = useCallback(() => {
     const root = document.getElementById('root');
