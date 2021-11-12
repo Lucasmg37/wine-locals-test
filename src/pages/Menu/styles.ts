@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   padding: 32px 24px 92px;
+  flex: 1;
+  height: 100%;
 
   > h1 {
     color: ${({ theme }) => theme.colors.primary};

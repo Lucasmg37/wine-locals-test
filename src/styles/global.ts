@@ -17,19 +17,19 @@ const Global = createGlobalStyle`
     background: none;
   }
 
-  html, body, #root {
-    width: 100%;
-    overflow-x: hidden;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow-y: hidden;
+  html, body {
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
   }
 
   #root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     scroll-behavior: smooth;
-    overflow-y: auto;
-    min-height: -webkit-fill-available;
+    max-width: 100%;
+    height: 100%;
   }
 
   input, textarea {

@@ -5,11 +5,11 @@ interface IuseScroll {
   top: number;
 }
 
-const useScroll = (): IuseScroll => {
+const useScroll = (id?: string): IuseScroll => {
   const [top, setTop] = useState(0);
 
   const goToTop = useCallback(() => {
-    const root = document.getElementById('root');
+    const root = document.getElementById(id || 'root');
     if (root) {
       root.scrollTo(0, 0);
     }
@@ -21,7 +21,7 @@ const useScroll = (): IuseScroll => {
   }, []);
 
   const scrollListener = useCallback(() => {
-    const root = document.getElementById('root');
+    const root = document.getElementById(id || 'root');
     if (root) {
       root.addEventListener('scroll', onScroll);
     }
