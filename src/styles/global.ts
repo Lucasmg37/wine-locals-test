@@ -27,7 +27,7 @@ const Global = createGlobalStyle`
 
   #root {
     scroll-behavior: smooth;
-    overflow: auto;
+    overflow-y: auto;
   }
 
   input, textarea {

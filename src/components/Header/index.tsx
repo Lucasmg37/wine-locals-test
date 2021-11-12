@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({
     <Container hasBackground={hasBackground}>
       {hasGoBack && (
         <button onClick={handleGoBack} type="button">
-          <ChevronLeft />
+          <ChevronLeft /> <span>Voltar</span>
         </button>
       )}
       <Brand />

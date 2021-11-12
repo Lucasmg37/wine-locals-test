@@ -9,6 +9,10 @@ export const Container = styled.div`
     margin-bottom: 8px;
     font-family: ${({ theme }) => theme.fonts.primary};
     font-weight: bold;
+
+    @media (min-width: 748px) {
+      font-size: 48px;
+    }
   }
 
   > p {
@@ -16,15 +20,30 @@ export const Container = styled.div`
     font-family: ${({ theme }) => theme.fonts.secondary};
     font-weight: 300;
     margin-bottom: 16px;
+
+    @media (min-width: 748px) {
+      margin-bottom: 40px;
+      font-size: 24px;
+    }
   }
 
   > ul {
     display: flex;
     flex-direction: column;
 
+    @media (min-width: 748px) {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      grid-gap: 64px;
+    }
+
     li {
       & + li {
         margin-top: 16px;
+
+        @media (min-width: 748px) {
+          margin-top: 0;
+        }
       }
     }
   }

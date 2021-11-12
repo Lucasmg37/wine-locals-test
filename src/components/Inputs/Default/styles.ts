@@ -11,6 +11,10 @@ export const Container = styled.label<ContainerProps>`
   font-weight: bold;
   display: block;
 
+  @media (min-width: 748px) {
+    font-size: 20px;
+  }
+
   > div {
     background: ${({ theme }) => theme.colors.white};
     border: 1px solid #dededf;
@@ -19,6 +23,10 @@ export const Container = styled.label<ContainerProps>`
     margin-top: 4px;
     padding: 0 16px;
     transition: ease 0.2s all;
+
+    @media (min-width: 748px) {
+      margin-top: 8px;
+    }
 
     ${({ hasFocus }) =>
       hasFocus &&
@@ -32,6 +40,10 @@ export const Container = styled.label<ContainerProps>`
       font-size: 16px;
       font-family: ${({ theme }) => theme.fonts.secondary};
       outline: none;
+
+      @media (min-width: 748px) {
+        font-size: 20px;
+      }
     }
   }
 `;
