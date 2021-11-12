@@ -15,10 +15,10 @@ const Default: React.FC<DefaultLayoutProps> = ({
   children,
   hasGoBack = true,
 }: DefaultLayoutProps) => {
-  const { top } = useScroll();
+  const { top } = useScroll('defaultLayout');
 
   return (
-    <Container>
+    <Container id="defaultLayout">
       <img src={background} alt="" />
       <Content>
         <Header hasGoBack={hasGoBack} hasBackground={top > 10} />

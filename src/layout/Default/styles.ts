@@ -5,6 +5,12 @@ export const Container = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  position: relative;
+  min-height: 100%;
+  max-height: -webkit-fill-available;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   > img {
     position: absolute;
