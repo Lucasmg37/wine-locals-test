@@ -1,46 +1,72 @@
-# Getting Started with Create React App
+# Share Eat - Cardápio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Teste Técnico - Wine Locals
 
-## Available Scripts
+![image](https://user-images.githubusercontent.com/25160385/141389389-ab37bde8-cb3d-45bf-9ad5-da00ed81de0f.png)
 
-In the project directory, you can run:
 
-### `yarn start`
+### Sobre o Desafio Técnico
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> Visando melhorar seu algoritmo de sugestão de lugares, o Wine Locals precisa conhecer o cardápio dos lugares (bares, restaurantes, lanchonetes, cafés, etc) exibidos no app. Para tanto, precisamos construir a seguinte funcionalidade:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### Frontend
 
-### `yarn test`
+- Criar a tela de lista de lugares exibindo nome, quantidade de pratos , novo prato e visualizar o detalhe do lugar
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Criar a tela de exibição do detalhe de lugares
 
-### `yarn build`
+- Criar o formulário de cadastro de pratos com nome, descrição e preço
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Funcionamento
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- As telas devem ser responsivas a dispositivos desktop e mobile
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Ao clicar no card do lugar, deve exibir o detalhe do lugar
 
-### `yarn eject`
+- Ao clicar no botão ( + ) na lista de lugares, deve exibir o formulário de cadastro do prato
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Ao clicar no botão ( + ) no detalhe do lugar, deve exibir o formulário de cadastro do prato
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- O clicar no ícone < deve voltar pra tela anterior
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Como executar localmente
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+ 1. Realize o clone do projeto em um diretório de sua preferência
+ 2. Dentro do diretório, execute ```yarn``` ou ```npm install```
+ 3. Execute o script ***start***. ```yarn start``` ou ```npm start```
+ 4. Seu navegador abra [http://localhost:3000](http://localhost:3000). 
 
-## Learn More
+### Criando o Build
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ 1. Execute ```yarn build``` ou ```npm run build```
+ 2. O build será gerado dentro da pasta ***dist***
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+ ## Sobre o Projeto
+
+Projeto desenvolvido utilizado o create-react-app
+
+### Tecnologias e Recursos
+
+ - React v17
+ - React Router Dom v6
+ - StyledComponents
+
+#### Qualidade de Código e Formatação
+- Prettier
+- EsLint Airbnb
+
+### Metodologias aplicadas
+#### Mobile First
+Toda a interface foi desenvolvida focada no Mobile, tendo em seguida suas versões desktop criadas
+
+#### Uso de Adapters
+Partindo pelo princípio que a aplicação hoje utiliza informações locais, os adapters permitem facilidade de implementação de outras formas para a execução dessas ações, por exemplo, com um fecth em uma API.
+
+#### Lógica desacoplada dos Componentes
+Com o intuito de deixar os componentes responsáveis somente pela UI, todas as ações que envolvem regras de negócio, são alocados em Services.
+
+### TODO
+-[ ] Tratar caso o usuário informe via rota um id inexistente
+-[ ] Testes da aplicação em dispositivos Apple (Safari)
+-[ ] Implementação de Testes (funcionais, integração e end-to-end)
