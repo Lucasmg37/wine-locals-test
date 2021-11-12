@@ -11,23 +11,23 @@
 
 #### Frontend
 
-- Criar a tela de lista de lugares exibindo nome, quantidade de pratos , novo prato e visualizar o detalhe do lugar
+- [x] Criar a tela de lista de lugares exibindo nome, quantidade de pratos , novo prato e visualizar o detalhe do lugar
 
-- Criar a tela de exibição do detalhe de lugares
+- [x] Criar a tela de exibição do detalhe de lugares
 
-- Criar o formulário de cadastro de pratos com nome, descrição e preço
+- [x] Criar o formulário de cadastro de pratos com nome, descrição e preço
 
 #### Funcionamento
 
-- As telas devem ser responsivas a dispositivos desktop e mobile
+- [x] As telas devem ser responsivas a dispositivos desktop e mobile
 
-- Ao clicar no card do lugar, deve exibir o detalhe do lugar
+- [x] Ao clicar no card do lugar, deve exibir o detalhe do lugar
 
-- Ao clicar no botão ( + ) na lista de lugares, deve exibir o formulário de cadastro do prato
+- [x] Ao clicar no botão ( + ) na lista de lugares, deve exibir o formulário de cadastro do prato
 
-- Ao clicar no botão ( + ) no detalhe do lugar, deve exibir o formulário de cadastro do prato
+- [x] Ao clicar no botão ( + ) no detalhe do lugar, deve exibir o formulário de cadastro do prato
 
-- O clicar no ícone < deve voltar pra tela anterior
+- [x] O clicar no ícone < deve voltar pra tela anterior
 
 ### Como executar localmente
 
