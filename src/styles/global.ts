@@ -23,11 +23,13 @@ const Global = createGlobalStyle`
     height: 100%;
     display: flex;
     flex-direction: column;
+    overflow-y: hidden;
   }
 
   #root {
     scroll-behavior: smooth;
     overflow-y: auto;
+    min-height: -webkit-fill-available;
   }
 
   input, textarea {
