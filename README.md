@@ -68,5 +68,7 @@ Com o intuito de deixar os componentes responsáveis somente pela UI, todas as a
 
 ### TODO
 -[ ] Tratar caso o usuário informe via rota um id inexistente
+
 -[ ] Testes da aplicação em dispositivos Apple (Safari)
+
 -[ ] Implementação de Testes (funcionais, integração e end-to-end)
